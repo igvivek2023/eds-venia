@@ -1,0 +1,44 @@
+.featuredcard-container {
+    margin-top: 50px;
+    .featuredcard.block > div {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;            
+        }
+    }
+    .featuredcard.block > div > div:nth-child(1) {
+        text-align: center;
+        width: 66.66%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+        h2 {
+            font-size: 3.75rem;
+            line-height: 1.25;
+        }
+        h3 {
+            font-size: 3rem;
+            margin-top: 20px;
+            line-height: 1.25;
+        }
+        p {
+            font-size: 16px;
+        }
+        a{
+            text-decoration: underline;
+            color: black;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    }
+    .featuredcard.block > div > div:nth-child(2) {
+        margin: 50px 0px 0px;
+        min-height: 320px;
+        padding: 10px;
+        width: 33.3333%;
+        @media screen and (max-width: 768px) {
+            min-height: auto;           
+        }
+    }
+}

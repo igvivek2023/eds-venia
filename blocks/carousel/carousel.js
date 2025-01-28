@@ -9,12 +9,8 @@ export default function decorate(block) {
   const rows = Array.from(block.children);
 
   rows.forEach((row, index) => {
-    if (index === 0) {
-      const nextBtn = createButton('btn-next', btnNxt);
-      row.replaceWith(nextBtn);
-    } else if (index === rows.length - 1) {
-      const prevBtn = createButton('btn-prev', btnPre);
-      row.replaceWith(prevBtn);
+    if (index === 0 || index === rows.length - 1) {
+      row.remove();
     } else {
       row.classList.add('slide');
       Array.from(row.children).forEach((col, colIndex) => {
@@ -44,18 +40,6 @@ export default function decorate(block) {
   });
 
   const dots = Array.from(dotsContainer.children);
-
-  document.querySelector(".btn-next").addEventListener("click", () => {
-    curSlide = (curSlide === maxSlide) ? 0 : curSlide + 1;
-    updateSlidePosition(slides, curSlide);
-    updateDots(dots, curSlide);
-  });
-
-  document.querySelector(".btn-prev").addEventListener("click", () => {
-    curSlide = (curSlide === 0) ? maxSlide : curSlide - 1;
-    updateSlidePosition(slides, curSlide);
-    updateDots(dots, curSlide);
-  });
 
   dots.forEach(dot => {
     dot.addEventListener('click', () => {

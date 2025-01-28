@@ -1,0 +1,49 @@
+.featuredbanner-wrapper {
+    .featuredbanner > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        div:nth-child(1) {
+            margin: 0px;
+            min-height: 400px;
+            padding: 0px;
+            width: 66.6667%;
+            @media screen and (max-width: 768px) {
+                min-height: auto;
+                width: 100%;
+            }
+        }
+        div:nth-child(2) {
+            background-color: rgb(27, 37, 44);
+            margin: 0px;
+            min-height: 400px;
+            color: #fff;
+            padding: 80px;
+            width: 33.3333%;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+            h2 {
+                font-size: 3.75rem;
+                line-height: 1.25;
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                margin-bottom: 1rem;
+                line-height: 1.5;
+                a {
+                    margin: 0 auto;
+                    background: transparent;
+                    color: #fff;
+                    text-decoration: underline;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

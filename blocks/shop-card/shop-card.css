@@ -1,0 +1,26 @@
+.shop-card-wrapper{
+    margin: 0;
+}
+.shop-card.block {
+    display: flex;
+    gap: 20px;
+    align-items: center;    
+    justify-content: center;
+    width: 100%;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;        
+    }
+}
+.shop-card.block > div{
+    position: relative;
+}
+.shop-card.block > div > div:first-child{
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    h2{
+        font-size: 3.75rem;
+        line-height: 1.25;
+    }
+}
